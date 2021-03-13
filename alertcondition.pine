@@ -1,0 +1,89 @@
+//@version=4
+//strategy("交叉", overlay=true)  // 把 study 改成 strategy
+study("alertcondition", overlay=true)
+//defval = default value
+//minval = min value
+//maxval = max value
+//step 每次跳多少
+
+len20 = input(title = "快速線", defval=20, minval=5, maxval=60, step=5)
+len60 = input(title = "慢速線", defval=60, minval=10, maxval=120, step=5)
+at_ma_type = input("SMA", title="移动平均线种类", options=["SMA", "WMA", "HMA", "EMA"])
+
+sma20 = sma(close, len20)
+sma60 = sma(close, len60)
+if at_ma_type == "WMA"
+    sma20 := wma(close, len20)
+    sma60 := wma(close, len60)
+if at_ma_type == "EMA"
+    sma20 := ema(close, len20)
+    sma60 := ema(close, len60)
+if at_ma_type == "HMA"
+    sma20 := hma(close, len20)
+    sma60 := hma(close, len60)
+
+plot(sma20, title="快速線", color=color.green, linewidth=3, transp=50)
+plot(sma60, title="慢速線", color=color.blue)
+
+
+// 時間週期參數允許值為：
+// 1S, 5S, 15S, 30S - 秒間隔(圖表時間週期應小於或等於請求的時間週期)
+// 從1到1440分鐘
+// 從1D到365D 幾天
+// 從1W到52W  幾週
+// 從1M到12M  幾個月
+
+
+dayhigh = security(syminfo.tickerid, "D", high)
+daylow  = security(syminfo.tickerid, "D", low)
+
+// style_line 會把線連起來，但 style_circles 不會把線連起來
+plot(dayhigh[1], color= color.yellow , style=plot.style_line)
+plot(daylow[1], color = color.purple , style=plot.style_line)
+
+to_long = crossover(sma20, sma60)   // 黃金交叉
+to_close = crossunder(sma20, sma60) // 死亡交叉
+
+plotchar(to_long, char="B", text="買", color=color.green, location=location.belowbar)
+plotchar(to_close, char="S", text="賣", color=color.red, location=location.abovebar)
+
+//strategy.entry("golden", strategy.long, qty=1000, when=to_long)
+//strategy.close("golden", qty=1000, when=to_close)
+
+x = input(20, title="小均", minval=0, maxval=55, step=5)
+y = input(60, title="中均", minval=60, maxval=115, step=5)
+z = input(120, title="大均", minval=120, maxval=360, step=5)
+
+close1 = close[x]
+close2 = close[y]
+close3 = close[z]
+
+//label.new(x, y, text, xloc, yloc, color, style, textcolor, size, textalign, tooltip) → series[label]
+//yloc=yloc.belowbar 或 yloc.abovebar
+//style=label.style_labeldown 或 label.style_labelup
+//tostring(x) 可以把本來是「數字」的x轉換成「字串」
+
+
+l1 = label.new(bar_index-x, na, tostring(x)+'MA '+tostring(close[x]), 
+  color=color.orange, 
+  textcolor=color.white,
+  style=close[x] > open[x] ? label.style_labeldown : label.style_labelup, 
+  yloc=close[x] > open[x] ? yloc.abovebar : yloc.belowbar
+  )
+label.delete(l1[1])
+
+l2 = label.new(bar_index-y, na, tostring(y)+'MA '+tostring(close[y]), 
+  color=color.blue, 
+  textcolor=color.white,
+   style=close[y] > open[y] ? label.style_labeldown : label.style_labelup, 
+  yloc=close[y] > open[y] ? yloc.abovebar : yloc.belowbar
+  )
+label.delete(l2[1])
+
+l3 = label.new(bar_index-z, na, tostring(z) +'MA '+tostring(close[z]), 
+  color=color.navy, 
+  textcolor=color.white,
+  style=close[z] > open[z] ? label.style_labeldown : label.style_labelup, 
+  yloc=close[z] > open[z] ? yloc.abovebar : yloc.belowbar
+  )
+label.delete(l3[1])
