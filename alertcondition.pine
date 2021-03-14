@@ -1,11 +1,6 @@
 //@version=4
 //strategy("交叉", overlay=true)  // 把 study 改成 strategy
 //hello pine script
-//test push and pull
-//test2
-//test3
-//test4
-//test5
 study("alertcondition", overlay=true)
 //defval = default value
 //minval = min value
