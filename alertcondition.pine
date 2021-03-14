@@ -3,6 +3,7 @@
 //hello pine script
 //test push and pull
 //test2
+//test3
 study("alertcondition", overlay=true)
 //defval = default value
 //minval = min value
