@@ -1,0 +1,41 @@
+C:\Users\rdymond>cd Documents
+
+C:\Users\rdymond\Documents>cd GitHub
+
+C:\Users\rdymond\Documents\GitHub>cd pine_scripts
+
+C:\Users\rdymond\Documents\GitHub\pine_scripts>git pull
+Already up to date.
+
+C:\Users\rdymond\Documents\GitHub\pine_scripts>git add alertcondition.pine
+
+C:\Users\rdymond\Documents\GitHub\pine_scripts>git commit -m "add test4"
+[main 5847ea5] add test4
+ 1 file changed, 1 insertion(+)
+
+C:\Users\rdymond\Documents\GitHub\pine_scripts>git push
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 152.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/pychiang0326/pine_scripts.git
+   96f6ab9..5847ea5  main -> main
+
+C:\Users\rdymond\Documents\GitHub\pine_scripts>git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 686 bytes | 3.00 KiB/s, done.
+From https://github.com/pychiang0326/pine_scripts
+   5847ea5..c014d68  main       -> origin/main
+Updating 5847ea5..c014d68
+Fast-forward
+ alertcondition.pine | 1 +
+ 1 file changed, 1 insertion(+)
+
+C:\Users\rdymond\Documents\GitHub\pine_scripts>
