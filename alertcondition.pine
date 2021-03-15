@@ -1,9 +1,5 @@
 //@version=4
 //strategy("交叉", overlay=true)  // 把 study 改成 strategy
-//hello pine script
-//test branch main-edit
-//test merge delete branch
-//test command line branch merge
 study("alertcondition", overlay=true)
 //defval = default value
 //minval = min value
