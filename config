@@ -50,6 +50,7 @@ bindsym $mod+Shift+d exec deadbeef
 bindsym $mod+Shift+v exec vlc 
 bindsym $mod+Shift+g exec gimp 
 bindsym $mod+Shift+p exec code 
+bindsym --release $mod+Shift+a exec gnome-screenshot -a
 
 # kill focused window
 bindsym $mod+Shift+c kill
