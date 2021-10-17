@@ -162,6 +162,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# assign specific program to workspace
 assign [class="Google-chrome"] $workspace1
 assign [class="Terminator"] $workspace2
 assign [class="Deadbeef"] $workspace3
@@ -206,6 +207,8 @@ bar {
         status_command i3status --config ~/.i3status.conf
         #position top
 }
+
+# program with start-up
 exec google-chrome
 exec terminator
 exec deadbeef
