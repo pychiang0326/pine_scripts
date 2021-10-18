@@ -213,4 +213,5 @@ exec google-chrome
 exec terminator
 exec deadbeef
 exec_always nitrogen --restore
+exec_always compton
 #exec --no-startup-id nitrogen --restore
