@@ -72,7 +72,8 @@ bindsym --release Shift+Print exec gnome-screenshot -a
 #bindsym $mod+d exec rofi -show run -lines 10 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "pango:monospace 14"
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -nb black -sb tomato -l 10 -fn 'Ubuntu Mono:pixelsize=25' 
+bindsym $mod+d exec --no-startup-id dmenu_run -nb black -sb purple -l 10 -fn 'Ubuntu Mono:pixelsize=25' 
+#bindsym $mod+d exec --no-startup-id dmenu_run -nb black -sb tomato -l 10 -fn 'Ubuntu Mono:pixelsize=25' 
 
 # kill focused window
 bindsym $mod+Shift+c kill
