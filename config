@@ -38,11 +38,11 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # set color
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
+set $bg-color #2f343f
+set $inactive-bg-color #2f343f
+set $text-color #f3f4f5
 set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set $urgent-bg-color #E53935
 
 # window colors
 #                       border              background         text                 indicator
@@ -68,13 +68,14 @@ bindsym $mod+Shift+p exec code
 # bindsym --release $mod+Shift+a exec gnome-screenshot -a
 bindsym --release Print exec gnome-screenshot
 bindsym --release Shift+Print exec gnome-screenshot -a
-bindsym $mod+d exec rofi -show run -lines 10 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "pango:monospace 14"
+#bindsym $mod+d exec rofi -show run -lines 10 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "pango:monospace 14"
+
 # kill focused window
 bindsym $mod+Shift+c kill
 
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec --no-startup-id dmenu_run -nb black -sb tomato -l 10 -fn 'Ubuntu Mono:pixelsize=25' 
+bindsym $mod+d exec --no-startup-id dmenu_run -nb black -sb tomato -l 10 -fn 'Ubuntu Mono:pixelsize=25' 
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
