@@ -38,11 +38,11 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # set color
-set $bg-color #2f343f
-set $inactive-bg-color #2f343f
-set $text-color #f3f4f5
+set $bg-color            #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
-set $urgent-bg-color #E53935
+set $urgent-bg-color     #E53935
 
 # window colors
 #                       border              background         text                 indicator
@@ -135,12 +135,12 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-#set $ws1 "1"
-#set $ws2 "2"
-#set $ws3 "3"
 set $workspace1 "1. browser"
 set $workspace2 "2. terminal"
 set $workspace3 "3. music"
+#set $ws1 "1"
+#set $ws2 "2"
+#set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -150,12 +150,12 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-#bindsym $mod+1 workspace number $ws1
-#bindsym $mod+2 workspace number $ws2
-#bindsym $mod+3 workspace number $ws3
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
+#bindsym $mod+1 workspace number $ws1
+#bindsym $mod+2 workspace number $ws2
+#bindsym $mod+3 workspace number $ws3
 bindsym $mod+4 workspace number $ws4
 bindsym $mod+5 workspace number $ws5
 bindsym $mod+6 workspace number $ws6
@@ -165,12 +165,12 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
-#bindsym $mod+Shift+1 move container to workspace number $ws1
-#bindsym $mod+Shift+2 move container to workspace number $ws2
-#bindsym $mod+Shift+3 move container to workspace number $ws3
 bindsym $mod+Shift+1 move container to workspace $workspace1 
 bindsym $mod+Shift+2 move container to workspace $workspace2 
 bindsym $mod+Shift+3 move container to workspace $workspace3
+#bindsym $mod+Shift+1 move container to workspace number $ws1
+#bindsym $mod+Shift+2 move container to workspace number $ws2
+#bindsym $mod+Shift+3 move container to workspace number $ws3
 bindsym $mod+Shift+4 move container to workspace number $ws4
 bindsym $mod+Shift+5 move container to workspace number $ws5
 bindsym $mod+Shift+6 move container to workspace number $ws6
@@ -218,7 +218,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -226,11 +225,10 @@ bar {
         #position top
 }
 
-# program with start-up
+# program auto-start with system start-up
 exec google-chrome
 exec terminator
 exec deadbeef
 exec_always nitrogen --restore
-exec_always compton
-
 #exec --no-startup-id nitrogen --restore
+exec_always compton
