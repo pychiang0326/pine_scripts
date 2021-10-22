@@ -59,7 +59,7 @@ floating_modifier $mod
 #bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec terminator
 
-# Application Hotkey
+# Application keybinding
 bindsym $mod+Shift+b exec google-chrome 
 bindsym $mod+Shift+n exec nautilus
 bindsym $mod+Shift+d exec deadbeef 
