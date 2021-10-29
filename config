@@ -69,6 +69,7 @@ bindsym $mod+Shift+d exec deadbeef
 bindsym $mod+Shift+v exec vlc 
 bindsym $mod+Shift+i exec gimp 
 bindsym $mod+Shift+p exec code 
+bindsym $mod+Shift+x exec i3lock 
 # bindsym --release $mod+Shift+a exec gnome-screenshot -a
 bindsym --release Print exec gnome-screenshot
 bindsym --release Shift+Print exec gnome-screenshot -a
