@@ -66,6 +66,7 @@ bindsym $mod+Return exec terminator
 bindsym $mod+Shift+b exec google-chrome 
 bindsym $mod+Shift+n exec nautilus
 bindsym $mod+Shift+d exec deadbeef 
+bindsym $mod+Shift+y exec evince 
 bindsym $mod+u exec microsoft-edge-beta 
 bindsym $mod+Shift+v exec vlc 
 bindsym $mod+Shift+i exec gimp 
@@ -194,11 +195,12 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # assign specific program to workspace
-assign [class="Google-chrome"] $workspace1
+#assign [class="Google-chrome"] $workspace1
 assign [class="Terminator"] $workspace2
 assign [class="Deadbeef"] $workspace3
 assign [class="Evince"] $workspace4
 #assign [class="Microsoft-edge-beta"] $workspace5
+assign [class="Microsoft-edge-beta"] $workspace1
 
 # reload the configuration file
 bindsym $mod+Shift+q reload
@@ -244,11 +246,11 @@ bar {
 }
 
 # program auto-start with system start-up
-exec google-chrome
+exec microsoft-edge-beta 
+#exec google-chrome
 exec terminator
 exec deadbeef
 exec evince
-#exec microsoft-edge-beta 
 exec_always nitrogen --restore
 #exec --no-startup-id nitrogen --restore
 exec_always compton
