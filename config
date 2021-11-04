@@ -67,7 +67,7 @@ bindsym $mod+Shift+b exec google-chrome
 bindsym $mod+Shift+n exec nautilus
 bindsym $mod+Shift+d exec deadbeef 
 bindsym $mod+Shift+y exec evince 
-bindsym $mod+u exec microsoft-edge-beta 
+bindsym $mod+u exec microsoft-edge
 bindsym $mod+Shift+v exec vlc 
 bindsym $mod+Shift+i exec gimp 
 bindsym $mod+Shift+p exec code 
@@ -200,7 +200,7 @@ assign [class="Terminator"] $workspace2
 assign [class="Deadbeef"] $workspace3
 assign [class="Evince"] $workspace4
 #assign [class="Microsoft-edge-beta"] $workspace5
-assign [class="Microsoft-edge-beta"] $workspace1
+assign [class="Microsoft-edge"] $workspace1
 
 # reload the configuration file
 bindsym $mod+Shift+q reload
@@ -246,7 +246,7 @@ bar {
 }
 
 # program auto-start with system start-up
-exec microsoft-edge-beta 
+exec microsoft-edge
 #exec google-chrome
 exec terminator
 exec deadbeef
