@@ -63,11 +63,13 @@ floating_modifier $mod
 bindsym $mod+Return exec terminator
 
 # Application keybinding
-bindsym $mod+Shift+b exec google-chrome 
+#bindsym $mod+Shift+b exec google-chrome 
+bindsym $mod+Shift+b exec microsoft-edge 
 bindsym $mod+Shift+n exec nautilus
 bindsym $mod+Shift+d exec deadbeef 
 bindsym $mod+Shift+y exec evince 
-bindsym $mod+u exec microsoft-edge
+#bindsym $mod+u exec microsoft-edge
+bindsym $mod+u exec google-chrome 
 bindsym $mod+Shift+v exec vlc 
 bindsym $mod+Shift+i exec gimp 
 bindsym $mod+Shift+p exec code 
