@@ -258,6 +258,7 @@ myLogHook = return ()
 -- By default, do nothing.
 --myStartupHook = return ()
 --myStartupHook = do
+myStartupHook :: X()
 myStartupHook = do 
  spawnOnce "nitrogen --restore &" 
  spawnOnce "compton &" 
