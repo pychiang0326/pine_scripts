@@ -257,10 +257,14 @@ myLogHook = return ()
 --
 -- By default, do nothing.
 --myStartupHook = return ()
-myStartupHook = do
-        spawnOnce "nitrogen --restore &" 
-        spawnOnce "compton &" 
-        spawnOn "1" "microsoft-edge"
+--myStartupHook = do
+myStartupHook = do 
+ spawnOnce "nitrogen --restore &" 
+ spawnOnce "compton &" 
+ spawnOn "1" "microsoft-edge"
+ spawnOn "2" "terminator"
+ spawnOn "3" "deadbeef"
+ spawnOn "4" "evince"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -268,10 +272,14 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 --main = xmonad defaults
+main :: IO()
 main = do
   xmproc <- spawnPipe "xmobar -x 0 /home/raymond/.config/xmobar/xmobarrc"
-  xmonad $ docks defaults
-
+  xmonad $ docks defaults {
+  startupHook = myStartupHook,
+  manageHook = manageSpawn
+  }
+  
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
 -- use the defaults defined in xmonad/XMonad/Config.hs
