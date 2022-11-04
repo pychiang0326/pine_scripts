@@ -3,7 +3,7 @@ options {
 
         //recursion yes;                 # 啟用遞迴定址
         //allow-recursion { trusted; };  # 允許“trusted”列表前來遞迴定址
-        listen-on port 53 {127.0.0.1;192.168.1.105; };   # 此處填寫ns1的內網IP地址。僅在內網監聽
+        listen-on port 53 {127.0.0.1;192.168.1.104; };   # 此處填寫ns1的內網IP地址。僅在內網監聽
         allow-transfer { none; };      # 預設禁用zone transfer
 
 	// If there is a firewall between you and nameservers you want

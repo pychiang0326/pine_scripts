@@ -7,10 +7,10 @@ $TTL    604800
                          604800 )       ; Negative Cache TTL
 ;
 @       IN      NS      localhost.
-//mydomain.com IN      NS      192.168.1.105
-        IN      NS      192.168.1.105
+//mydomain.com IN      NS      192.168.1.104
+        IN      NS      192.168.1.104
 
-aaa     IN      A       192.168.1.105
-bbb     IN      A       192.168.1.105
-test     IN      A       192.168.1.105
+aaa     IN      A       192.168.1.104
+bbb     IN      A       192.168.1.104
+test     IN      A       192.168.1.104
 ccc     IN      CNAME   bbb
